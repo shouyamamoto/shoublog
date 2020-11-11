@@ -1,0 +1,17 @@
+@import "./variables/*.scss";
+
+@import "./breakpoints/414up/**/*.scss";
+
+@media (min-width: 768px) {
+    @import "./breakpoints/768up/**/*.scss";
+}
+
+@media (min-width: 1024px) {
+    @import "./breakpoints/1024up/**/*.scss";
+}
+
+@media (min-width: 1440px) {
+    @import "./breakpoints/1440up/**/*.scss";
+}
+
+

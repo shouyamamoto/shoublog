@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php get_header(); ?>
 <body>
     <!-- メインビジュアル -->
     <header class="mainVisual"></header>
     <!-- メインビジュアル -->
-    
     
     <!-- ナビバー -->
     <nav class="nav">
@@ -187,11 +180,4 @@
     </section>
     <!-- カテゴリー一覧 -->
 
-    <!-- フッター -->
-    <footer class="footer">
-        <p class="footer__text">やましょうのブログ</p>
-        <p class="footer__copyWrite">&copy; shouyamamoto 2020</p>
-    </footer>
-    <!-- フッター -->
-</body>
-</html>
+<?php get_footer(); ?>
