@@ -31,16 +31,16 @@
     <div class="photoCategory">
         <img src="<?php echo get_template_directory_uri(); ?>/images/photo.jpg" alt="" class="photoCategory__image">
         <?php 
-                $parent_category = get_category_by_slug('photo');
-                $args = array(
-                    'type' => 'post',
-                    'child_of' => $parent_category->term_id,
-                    'hide_empty' => 0,
-                    'order_by' => 'name',
-                );
-                $child_categories = get_categories($args);
-                foreach($child_categories as $category) :
-            ?>
+            $parent_category = get_category_by_slug('photo');
+            $args = array(
+                'type' => 'post',
+                'child_of' => $parent_category->term_id,
+                'hide_empty' => 0,
+                'order_by' => 'name',
+            );
+            $child_categories = get_categories($args);
+            foreach($child_categories as $category) :
+        ?>
         <ul class="photoCategory__list">
             <li class="photoCategory__item">
                 <a href="<?php echo get_category_link($category->term_id); ?>" class="photoCategory__link">

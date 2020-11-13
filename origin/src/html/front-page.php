@@ -77,10 +77,14 @@
                 <p>記事がありません。</p>
             <?php endif; ?>
             </ul>
-            <button class="codeArticle__btn">
-                <a href="" class="codeArticle__link"></a>
-            </button>
         </article>
+        <button class="codeArticle__btn">
+            <?php 
+                $category_id = get_cat_ID('code');
+                $category_link = get_category_link($category_id);
+            ?>
+            <a href="<?php echo esc_url( $category_link ); ?>" class="codeArticle__link">もっと読む</a>
+        </button>
         <!-- codeの記事 -->
 
 
@@ -120,10 +124,14 @@
                     <p>記事がありません。</p>
                 <?php endif; ?>
             </ul>
-            <button class="photoArticle__btn">
-                <a href="" class="photoArticle__link"></a>
-            </button>
         </article>
+        <button class="photoArticle__btn">
+            <?php 
+                $category_id = get_cat_ID('photo');
+                $category_link = get_category_link($category_id);
+            ?>
+            <a href="<?php echo esc_url( $category_link ); ?>" class="photoArticle__link">もっと読む</a>
+        </button>
         <!-- photoの記事 -->
 
         <!-- lifeの記事 -->
@@ -161,10 +169,14 @@
                     <p>記事がありません。</p>
                 <?php endif; ?>
             </ul>
-            <button class="lifeArticle__btn">
-                <a href="" class="lifeArticle__link"></a>
-            </button>
         </article>
+        <button class="lifeArticle__btn">
+            <?php 
+                $category_id = get_cat_ID('life');
+                $category_link = get_category_link($category_id);
+            ?>
+            <a href="<?php echo esc_url( $category_link ); ?>" class="lifeArticle__link">もっと読む</a>
+        </button>
     </section>
     <!-- lifeの記事 -->
 
