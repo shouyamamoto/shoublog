@@ -4,7 +4,7 @@
     
     <!-- codeカテゴリーの子カテゴリー一覧 -->
     <div class="codeCategory">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="codeCategory__image">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="codeCategory__image" width="100%" height="200px" style="object-fit: cover;">
         <ul class="codeCategory__list">
             <?php 
                 $parent_category = get_category_by_slug('code');
@@ -27,9 +27,9 @@
     </div>
     <!-- codeカテゴリーの子カテゴリー一覧 -->
 
-    <!-- photoカテゴリーについているタグの一覧 -->
+    <!-- photoカテゴリーの子カテゴリー一覧 -->
     <div class="photoCategory">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/photo.jpg" alt="" class="photoCategory__image">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/photo.jpg" alt="" class="photoCategory__image" width="100%" height="200px" style="object-fit: cover;">
         <?php 
             $parent_category = get_category_by_slug('photo');
             $args = array(
@@ -50,11 +50,11 @@
         </ul>
         <?php endforeach;?>
     </div>
-    <!-- photoカテゴリーについているタグの一覧 -->
+    <!-- photoカテゴリーの子カテゴリー一覧 -->
     
-    <!-- lifeカテゴリーについているタグの一覧 -->
+    <!-- lifeカテゴリーの子カテゴリー一覧 -->
     <div class="lifeCategory">
-        <img src="<?php echo get_template_directory_uri()?>/images/life.jpg" alt="" class="lifeCategory__image">
+        <img src="<?php echo get_template_directory_uri()?>/images/life.jpg" alt="" class="lifeCategory__image" width="100%" height="200px" style="object-fit: cover;">
         <?php 
             $parent_category = get_category_by_slug('life');
             $args = array(
@@ -76,6 +76,6 @@
             <?php endforeach; ?>
         </ul>
     </div>
-    <!-- lifeカテゴリーについているタグの一覧 -->
+    <!-- lifeカテゴリーの子カテゴリー一覧 -->
 </section>
 <!-- カテゴリー一覧 -->
