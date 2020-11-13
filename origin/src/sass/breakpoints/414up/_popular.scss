@@ -1,4 +1,4 @@
-.mustPopular {
+.popular {
     width: 80%;
 
     &__image {
@@ -8,6 +8,7 @@
 
     &__title {
         font-family: 'Anton', sans-serif;
+        font-size: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,8 +17,8 @@
     }
 
     &__title--num {
-        font-size: 32px;
-        margin-right: 10px;
+        font-size: 48px;
+        margin-right: 48px;
     }
 
     &__details {

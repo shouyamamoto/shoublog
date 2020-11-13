@@ -1,0 +1,46 @@
+.photoArticle {
+    width: 80%;
+
+    &__image {
+        position: relative;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: 'Anton', sans-serif;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.08em;
+    }
+
+    &__title--num {
+        font-size: 48px;
+        margin-right: 48px;
+    }
+
+    &__details {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    &__time {
+        padding: 2px 4px;
+        background-color: $cGray;
+        color: $cWhite;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        margin: 60px auto 0;
+        padding: 8px 0;
+        text-align: center;
+        border-top: 1px solid $cBlack;
+        border-bottom: 1px solid $cBlack;
+    }
+
+}

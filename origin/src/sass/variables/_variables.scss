@@ -1,7 +1,12 @@
 $cBlack: #333333;
 $cWhite: #fff;
+$cGray: #999;
 
-.mb--sl {
+.mb--xs {
+    margin: 0 auto 20px auto;
+}
+
+.mb--sm {
     margin: 0 auto 40px auto;
 }
 
@@ -17,4 +22,6 @@ $cWhite: #fff;
     margin: 0 auto 120px auto;
 }
 
-
+.no-image {
+    object-fit: cover;
+}
