@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php get_header(); ?>
     <!-- メインビジュアル -->
     <header class="mainVisual"></header>
     <!-- メインビジュアル -->
@@ -136,62 +129,6 @@
     </div>
     <!-- 検索結果 -->
 
-    <!-- カテゴリー一覧 -->
-    <section class="category">
-        <h2 class="category__title">CATEGORY</h2>
+    <?php get_template_part('template-parts/category', 'list')?>
 
-        <div class="codeCategory">
-            <img src="" alt="" class="codeCategory__image">
-            <ul class="codeCategory__list">
-                <li class="codeCategory__item">
-                    <a href="" class="codeCategory__link"></a>
-                </li>
-                <li class="codeCategory__item">
-                    <a href="" class="codeCategory__link"></a>
-                </li>
-                <li class="codeCategory__item">
-                    <a href="" class="codeCategory__link"></a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="photoCategory">
-            <img src="" alt="" class="photoCategory__image">
-            <ul class="photoCategory__list">
-                <li class="photoCategory__item">
-                    <a href="" class="photoCategory__link"></a>
-                </li>
-                <li class="photoCategory__item">
-                    <a href="" class="photoCategory__link"></a>
-                </li>
-                <li class="photoCategory__item">
-                    <a href="" class="photoCategory__link"></a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="lifeCategory">
-            <img src="" alt="" class="lifeCategory__image">
-            <ul class="lifeCategory__list">
-                <li class="lifeCategory__item">
-                    <a href="" class="lifeCategory__link"></a>
-                </li>
-                <li class="lifeCategory__item">
-                    <a href="" class="lifeCategory__link"></a>
-                </li>
-                <li class="lifeCategory__item">
-                    <a href="" class="lifeCategory__link"></a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- カテゴリー一覧 -->
-
-    <!-- フッター -->
-    <footer class="footer">
-        <p class="footer__text">やましょうのブログ</p>
-        <p class="footer__copyWrite">&copy; shouyamamoto 2020</p>
-    </footer>
-    <!-- フッター -->
-</body>
-</html>
+<?php get_footer(); ?>
