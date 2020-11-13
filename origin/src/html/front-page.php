@@ -165,60 +165,81 @@
     <section class="category">
         <h2 class="category__title">CATEGORY</h2>
         
-        
+        <!-- codeカテゴリーの子カテゴリー一覧 -->
         <div class="codeCategory">
             <img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="codeCategory__image">
             <ul class="codeCategory__list">
                 <?php 
+                    $parent_category = get_category_by_slug('code');
                     $args = array(
-                        'post_type' => 'post',
-                        'category_name' => 'code',
+                        'type' => 'post',
+                        'child_of' => 152,
+                        'hide_empty' => 0,
+                        'order_by' => 'name',
                     );
-                    $the_query = new WP_Query($args);
+                    $child_categories = get_categories($args);
+                    foreach($child_categories as $category) :
                 ?>
-                <?php if($the_query->have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
                 <li class="codeCategory__item">
-                    <a href="<?php the_permalink(); ?>" class="codeCategory__link">
-                        <p><?php the_tags(); ?></p>
+                    <a href="<?php echo get_category_link($category->term_id); ?>" class="codeCategory__link">
+                        <?php echo $category->cat_name; ?>
                     </a>
                 </li>
-                <?php wp_reset_postdata(); ?>
-                <?php endwhile; ?>
-                <?php else: ?>
-                    <p>記事はありません</p>
-                <?php endif; ?>
+                <?php endforeach; ?>
             </ul>
         </div>
+        <!-- codeカテゴリーの子カテゴリー一覧 -->
 
+        <!-- photoカテゴリーについているタグの一覧 -->
         <div class="photoCategory">
             <img src="" alt="" class="photoCategory__image">
+            <?php 
+                    $parent_category = get_category_by_slug('photo');
+                    $args = array(
+                        'type' => 'post',
+                        'child_of' => $parent_category->term_id,
+                        'hide_empty' => 0,
+                        'order_by' => 'name',
+                    );
+                    $child_categories = get_categories($args);
+                    foreach($child_categories as $category) :
+                ?>
             <ul class="photoCategory__list">
                 <li class="photoCategory__item">
-                    <a href="" class="photoCategory__link"></a>
-                </li>
-                <li class="photoCategory__item">
-                    <a href="" class="photoCategory__link"></a>
-                </li>
-                <li class="photoCategory__item">
-                    <a href="" class="photoCategory__link"></a>
+                    <a href="<?php echo get_category_link($category->term_id); ?>" class="photoCategory__link">
+                        <?php echo $category->cat_name; ?>
+                    </a>
                 </li>
             </ul>
+            <?php endforeach;?>
         </div>
-
+        <!-- photoカテゴリーについているタグの一覧 -->
+        
+        <!-- lifeカテゴリーについているタグの一覧 -->
         <div class="lifeCategory">
             <img src="" alt="" class="lifeCategory__image">
+            <?php 
+                $parent_category = get_category_by_slug('life');
+                $args = array(
+                    'type' => 'post',
+                    'child_of' => $parent_category->term_id, 
+                    'hide_empty' => 0,
+                    'order_by' => 'name',
+                );
+
+                $child_categories = get_categories($args);
+                foreach($child_categories as $category):
+            ?>
             <ul class="lifeCategory__list">
                 <li class="lifeCategory__item">
-                    <a href="" class="lifeCategory__link"></a>
+                    <a href="<?php echo get_category_link($category->term_id); ?>" class="lifeCategory__link">
+                        <?php echo $category->cat_name; ?>
+                    </a>
                 </li>
-                <li class="lifeCategory__item">
-                    <a href="" class="lifeCategory__link"></a>
-                </li>
-                <li class="lifeCategory__item">
-                    <a href="" class="lifeCategory__link"></a>
-                </li>
+                <?php endforeach; ?>
             </ul>
         </div>
+        <!-- lifeカテゴリーについているタグの一覧 -->
     </section>
     <!-- カテゴリー一覧 -->
 
