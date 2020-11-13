@@ -6,24 +6,7 @@
     </header>
     <!-- メインビジュアル -->
 
-    <!-- ナビバー -->
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item home">
-                <a href="">HOME</a>
-            </li>
-            <li class="nav__item category">
-                <a href="">CATEGORY</a>
-            </li>
-            <li class="nav__item about">
-                <a href="">ABOUT</a>
-            </li>
-            <li class="nav__item contact">
-                <a href="">CONTACT</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- ナビバー -->
+    <?php get_template_part('template-parts/nav', 'bar'); ?>
 
     <!-- よく読まれている記事 -->
     <!-- 3件ループ -->

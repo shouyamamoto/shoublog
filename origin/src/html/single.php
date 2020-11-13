@@ -4,24 +4,7 @@
     <header class="mainVisual"></header>
     <!-- メインビジュアル -->
 
-    <!-- ナビバー -->
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item home">
-                <a href=""></a>
-            </li>
-            <li class="nav__item category">
-                <a href=""></a>
-            </li>
-            <li class="nav__item about">
-                <a href=""></a>
-            </li>
-            <li class="nav__item contact">
-                <a href=""></a>
-            </li>
-        </ul>
-    </nav>
-    <!-- ナビバー -->
+    <?php get_template_part('template-parts/nav', 'bar'); ?>
 
     <article class="articleDetail">
         <p class="articleDetail__label">wordpress</p>

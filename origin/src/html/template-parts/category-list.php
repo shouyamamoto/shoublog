@@ -1,5 +1,5 @@
 <!-- カテゴリー一覧 -->
-<section class="category">
+<section class="category" id="category">
     <h2 class="category__title">CATEGORY</h2>
     
     <!-- codeカテゴリーの子カテゴリー一覧 -->

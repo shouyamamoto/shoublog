@@ -1,4 +1,4 @@
-<!-- カテゴリー一覧 --><section class="category"><h2 class="category__title">CATEGORY</h2><!-- codeカテゴリーの子カテゴリー一覧 --><div class="codeCategory"><img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="codeCategory__image"><ul class="codeCategory__list"> <?php 
+<!-- カテゴリー一覧 --><section class="category" id="category"><h2 class="category__title">CATEGORY</h2><!-- codeカテゴリーの子カテゴリー一覧 --><div class="codeCategory"><img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="codeCategory__image"><ul class="codeCategory__list"> <?php 
                 $parent_category = get_category_by_slug('code');
                 $args = array(
                     'type' => 'post',
