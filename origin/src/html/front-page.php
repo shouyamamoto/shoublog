@@ -15,16 +15,24 @@
 
         <ul class="mustPopular__list">
             <?php if(have_posts()) : while(have_posts()) : the_post();?>
-                <li class="mostPopular__item">
-                    <a href="<?php the_permalink(); ?>">
+                <li class="mustPopular__item">
+                    <div class="mustPopular__image">
+                        <a href="<?php the_permalink(); ?>" class="mustPopular__link">
+                        <?php the_post_thumbnail('medium'); ?>
+                        </a>
+                    </div>
+                    
+                    <div class="mustPopular__Details">
+                        <a href="<?php the_permalink(); ?>" class="mustPopular__link">
+                        <p><?php the_time('Y/n/j'); ?><p>
                         <?php the_title(); ?>
                         <?php the_excerpt(); ?>
-                    </a>
+                        </a>
+                    </div>
                 </li>
             <?php endwhile; ?>
             <?php else : ?>
                 <p>記事がありません。</p>
-            
             <?php endif; ?>
         </ul>
         <span class="mustPopular__arrow--left"></span>
@@ -49,10 +57,19 @@
             <?php if ($the_query->have_posts()) :?>
             <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
                 <li class="codeArticle__item">
-                    <a href="" class="codeArticle__link">
+                    <div class="codeArticle__image">
+                        <a href="<?php the_permalink(); ?>" class="codeArticle__link">
+                        <?php the_post_thumbnail('medium'); ?>
+                        </a>
+                    </div>
+                    
+                    <div class="codeArticle__Details">
+                        <a href="<?php the_permalink(); ?>" class="codeArticle__link">
+                        <p><?php the_time('Y/n/j'); ?><p>
                         <?php the_title(); ?>
                         <?php the_excerpt(); ?>
-                    </a>
+                        </a>
+                    </div>
                 </li>
             <?php wp_reset_postdata(); ?>
             <?php endwhile; ?>
@@ -69,25 +86,34 @@
 
         <!-- photoの記事 -->
         <?php 
-                $args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => 4,
-                    'category_name' => 'photo',
-                );
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 4,
+                'category_name' => 'photo',
+            );
 
-                $the_query = new WP_Query($args);
+            $the_query = new WP_Query($args);
         ?>
         <article class="photoArticle">
             <h2 class="photoArticle__title"><span>03</span>PHOTO</h2>
             <?php if ($the_query->have_posts()) :?>
             <ul class="photoArticle__list">
                 <?php while($the_query->have_posts()) : $the_query->the_post() ; ?>
-                    <li class="photoArticle__item">
-                        <a href="" class="photoArticle__link">
-                            <?php the_title(); ?>
-                            <?php the_excerpt(); ?>
+                <li class="photoArticle__item">
+                    <div class="photoArticle__image">
+                        <a href="<?php the_permalink(); ?>" class="photoArticle__link">
+                        <?php the_post_thumbnail('medium'); ?>
                         </a>
-                    </li>
+                    </div>
+                    
+                    <div class="photoArticle__Details">
+                        <a href="<?php the_permalink(); ?>" class="photoArticle__link">
+                        <p><?php the_time('Y/n/j'); ?><p>
+                        <?php the_title(); ?>
+                        <?php the_excerpt(); ?>
+                        </a>
+                    </div>
+                </li>
                 <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
                 <?php else: ?>
@@ -115,10 +141,19 @@
             <ul class="lifeArticle__list">
                 <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
                     <li class="lifeArticle__item">
-                        <a href="" class="lifeArticle__link">
+                        <div class="lifeArticle__image">
+                            <a href="<?php the_permalink(); ?>" class="lifeArticle__link">
+                            <?php the_post_thumbnail('medium'); ?>
+                            </a>
+                        </div>
+                        
+                        <div class="lifeArticle__Details">
+                            <a href="<?php the_permalink(); ?>" class="lifeArticle__link">
+                            <p><?php the_time('Y/n/j'); ?><p>
                             <?php the_title(); ?>
                             <?php the_excerpt(); ?>
-                        </a>
+                            </a>
+                        </div>
                     </li>
                 <?php wp_reset_postdata(); ?>
                 <?php endwhile; ?>
