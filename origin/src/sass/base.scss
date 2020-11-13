@@ -1,5 +1,15 @@
 @import "./variables/*.scss";
 
+body {
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    max-width: 1440px;
+    color: $cBlack;
+}
+
+
+
 @import "./breakpoints/414up/**/*.scss";
 
 @media (min-width: 768px) {
@@ -13,5 +23,3 @@
 @media (min-width: 1440px) {
     @import "./breakpoints/1440up/**/*.scss";
 }
-
-

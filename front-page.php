@@ -1,4 +1,4 @@
-<?php get_header(); ?> <body><!-- メインビジュアル --><header class="mainVisual"><img src="<?php echo get_template_directory_uri(); ?>/images/mainVisual.jpg" alt="" width="100%" height="200px" style="object-fit: cover;"></header><!-- メインビジュアル --> <?php get_template_part('template-parts/nav', 'bar'); ?> <!-- よく読まれている記事 --><!-- 3件ループ --> <?php
+<?php get_header(); ?> <body><!-- メインビジュアル --><header class="mainVisual mb--sl"><img src="<?php echo get_template_directory_uri(); ?>/images/mainVisual.jpg" class="mainVisual__image" alt="やましょうのブログのメインビジュアルです。" width="100%" height="200px" style="object-fit: cover;"></header><!-- メインビジュアル --> <?php get_template_part('template-parts/nav', 'bar'); ?> <!-- よく読まれている記事 --><!-- 3件ループ --> <?php
         // views post metaで記事のPV情報を取得する
         setPostViews(get_the_ID());
 
@@ -6,13 +6,13 @@
             'meta_key' => 'post_views_count',
             'orderby' => 'meta_value_num',
             'order' => 'DESC',
-            'posts_per_page' => 3 // ← 3件取得
+            'posts_per_page' => 3, // ← 3件取得
         );
         $the_query = new WP_Query($args);
-    ?> <section class="mustPopular"><h2 class="mustPopular__title"><span>01</span>MUST-POPULAR</h2><ul class="mustPopular__list"> <?php 
+    ?> <section class="mustPopular mb--md"><h2 class="mustPopular__title"><span class="mustPopular__title--num">01</span>MUST-POPULAR</h2><ul class="mustPopular__list"> <?php 
                 // WP_Queryによるループ
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
-            ?> <li class="mustPopular__item"><div class="mustPopular__image"><a href="<?php the_permalink(); ?>" class="mustPopular__link"></a></div><div class="mustPopular__Details"><a href="<?php the_permalink(); ?>" class="mustPopular__link"><p><?php the_time('Y/n/j'); ?></p><p> <?php the_title(); ?> <?php the_excerpt(); ?> </p></a></div></li> <?php endwhile; ?> <?php wp_reset_postdata(); ?> <?php else : ?> <p>記事がありません。</p> <?php endif; ?> </ul><span class="mustPopular__arrow--left"></span> <span class="mustPopular__arrow--right"></span></section><!-- よく読まれている記事 --><!-- 記事一覧 --><section class="article"><!-- codeの記事 --> <?php 
+            ?> <li class="mustPopular__item"><div class="mustPopular__image"><a href="<?php the_permalink(); ?>" class="mustPopular__link"> <?php the_post_thumbnail('medium'); ?> </a></div><div class="mustPopular__details"><a href="<?php the_permalink(); ?>" class="mustPopular__link"> <?php the_title(); ?> </a></div></li> <?php endwhile; ?> <?php wp_reset_postdata(); ?> <?php else : ?> <p>記事がありません。</p> <?php endif; ?> </ul><span class="mustPopular__arrow--left"></span> <span class="mustPopular__arrow--right"></span></section><!-- よく読まれている記事 --><!-- 記事一覧 --><section class="article"><!-- codeの記事 --> <?php 
             $args = array(
                 'post_type' => 'post',
                 'category_name' => 'code',

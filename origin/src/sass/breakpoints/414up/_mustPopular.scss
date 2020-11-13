@@ -1,0 +1,29 @@
+.mustPopular {
+    width: 80%;
+
+    &__image {
+        position: relative;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: 'Anton', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.08em;
+    }
+
+    &__title--num {
+        font-size: 32px;
+        margin-right: 10px;
+    }
+
+    &__details {
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 16px;
+        text-align: center;
+    }
+}

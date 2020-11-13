@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <body>
     <!-- メインビジュアル -->
-    <header class="mainVisual">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/mainVisual.jpg" alt="" width="100%" height="200px" style="object-fit: cover;">
+    <header class="mainVisual mb--sl">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/mainVisual.jpg" class="mainVisual__image" alt="やましょうのブログのメインビジュアルです。" width="100%" height="200px" style="object-fit: cover;">
     </header>
     <!-- メインビジュアル -->
 
@@ -18,12 +18,12 @@
             'meta_key' => 'post_views_count',
             'orderby' => 'meta_value_num',
             'order' => 'DESC',
-            'posts_per_page' => 3 // ← 3件取得
+            'posts_per_page' => 3, // ← 3件取得
         );
         $the_query = new WP_Query($args);
     ?>
-    <section class="mustPopular">
-        <h2 class="mustPopular__title"><span>01</span>MUST-POPULAR</h2>
+    <section class="mustPopular mb--md">
+        <h2 class="mustPopular__title"><span class="mustPopular__title--num">01</span>MUST-POPULAR</h2>
 
         <ul class="mustPopular__list">
             <?php 
@@ -33,14 +33,13 @@
             <li class="mustPopular__item">
                 <div class="mustPopular__image">
                     <a href="<?php the_permalink(); ?>" class="mustPopular__link">
+                        <?php the_post_thumbnail('medium'); ?>
                     </a>
                 </div>
-                
-                <div class="mustPopular__Details">
+
+                <div class="mustPopular__details">
                     <a href="<?php the_permalink(); ?>" class="mustPopular__link">
-                        <p><?php the_time('Y/n/j'); ?><p>
                         <?php the_title(); ?>
-                        <?php the_excerpt(); ?>
                     </a>
                 </div>
             </li>
