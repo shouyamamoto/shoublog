@@ -37,10 +37,14 @@
         justify-content: center;
         width: 250px;
         margin: 60px auto 0;
-        padding: 8px 0;
-        text-align: center;
         border-top: 1px solid $cBlack;
         border-bottom: 1px solid $cBlack;
     }
 
+    &__btn a {
+        display: block;
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
 }

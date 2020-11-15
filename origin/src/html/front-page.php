@@ -76,7 +76,7 @@
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail('medium'); ?>
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" alt="サムネイルがありません。" width="300px" height="200px">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="300px" height="200px">
                             <?php endif; ?>
                         </a>
                     </div>
@@ -176,7 +176,7 @@
                                 <?php if (has_post_thumbnail()) : ?>
                                     <?php the_post_thumbnail('medium'); ?>
                                 <?php else : ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" alt="サムネイルがありません。" width="300px" height="200px">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="300px" height="200px">
                                 <?php endif; ?>
                             </a>
                         </div>
@@ -195,25 +195,28 @@
                 <?php endif; ?>
             </ul>
             <button class="lifeArticle__btn">
-            <?php 
-                $category_id = get_cat_ID('life');
-                $category_link = get_category_link($category_id);
-            ?>
-            <a href="<?php echo esc_url( $category_link ); ?>" class="lifeArticle__link">もっと読む</a>
-        </button>
+                <?php 
+                    $category_id = get_cat_ID('life');
+                    $category_link = get_category_link($category_id);
+                ?>
+                <a href="<?php echo esc_url( $category_link ); ?>" class="lifeArticle__link">もっと読む</a>
+            </button>
         </article>
         
     </section>
     <!-- lifeの記事 -->
 
     <!-- 自己紹介 -->
-    <section class="about">
-        <h2 class="about__title"><span>05</span>ABOUT</h2>
+    <section class="about mb--lr">
+        <h2 class="about__title"><span class="about__title--num">05</span>ABOUT</h2>
         <div class="about__item">
             <a href="" class="about__link">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/me.jpg" alt="#" width="100%" height="200px">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/me.jpg" class="about__image" alt="#" width="100%" height="200px">
             </a>
         </div>
+        <button class="about__btn">
+            <a href="<?php echo get_permalink(2227); ?>" class="about__link">もっと知る</a>
+        </button>
     </section>
     <!-- 自己紹介 -->
 

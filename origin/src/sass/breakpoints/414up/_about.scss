@@ -1,9 +1,16 @@
-.lifeArticle {
+.about {
     width: 80%;
+
+    &__item {
+        width: 300px;
+        margin: 0 auto;
+    }
 
     &__image {
         position: relative;
         text-align: center;
+        object-fit: cover;
+        height: 200px;
     }
 
     &__title {
@@ -21,17 +28,6 @@
         margin-right: 48px;
     }
 
-    &__details {
-        width: 300px;
-        margin: 0 auto;
-    }
-
-    &__time {
-        padding: 2px 4px;
-        background-color: $cGray;
-        color: $cWhite;
-    }
-
     &__btn {
         display: flex;
         justify-content: center;
@@ -47,4 +43,5 @@
         width: 100%;
         text-align: center;
     }
+
 }
