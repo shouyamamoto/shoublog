@@ -1,0 +1,19 @@
+.category {
+    width: 80%;
+
+    &__item {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-family: 'Anton', sans-serif;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.08em;
+        margin-bottom: 40px;
+    }
+}
