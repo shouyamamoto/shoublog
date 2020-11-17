@@ -1,0 +1,43 @@
+@mixin sectionStyle {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto 80px;
+}
+
+@mixin sectionStyleBgc {
+    background-color: $cGrayWhite;
+    margin: 0 calc(50% - 50vw) 80px;
+    padding: 80px 0;
+}
+
+@mixin sectionTitle {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.08em;
+}
+
+@mixin sectionTitleNum {
+    font-size: 48px;
+    margin-right: 48px;
+}
+
+@mixin sectionTime {
+    display: block;
+    width: 80px;
+    padding: 2px 4px;
+    font-size: 13px;
+    background-color: $cGrayWhite;
+}
+
+@mixin sectionBtn {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    margin: 60px auto 0;
+    border-top: 1px solid $cBlack;
+    border-bottom: 1px solid $cBlack;
+}

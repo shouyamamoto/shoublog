@@ -1,0 +1,33 @@
+.about {
+    @include sectionStyle;
+
+    &__item {
+        text-align: center;
+    }
+
+    &__image {
+        position: relative;
+        text-align: center;
+        object-fit: cover;
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__title--num {
+        @include sectionTitleNum;
+    }
+
+    &__btn {
+        @include sectionBtn;
+    }
+
+    &__btn a {
+        display: block;
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+}

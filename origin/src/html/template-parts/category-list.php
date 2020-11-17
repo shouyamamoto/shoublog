@@ -4,7 +4,10 @@
     
     <!-- codeカテゴリーの子カテゴリー一覧 -->
     <div class="codeCategory mb--md">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="codeCategory__image" width="100%" height="200px" style="object-fit: cover;">
+        <div class="codeCategory__imageContainer">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="codeCategory__image" width="100%" height="200px">
+            <p class="codeCategory__text">コーディング<br><span class="codeCategory__text--small">CODE</span></p>
+        </div>
         <ul class="codeCategory__list">
             <?php 
                 $parent_category = get_category_by_slug('code');
@@ -29,7 +32,11 @@
 
     <!-- photoカテゴリーの子カテゴリー一覧 -->
     <div class="photoCategory mb--md">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/photo.jpg" alt="" class="photoCategory__image" width="100%" height="200px" style="object-fit: cover;">
+        <div class="codeCategory__imageContainer">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/photo.jpg" alt="" class="photoCategory__image" width="100%" height="200px">
+            <p class="codeCategory__text">写真のコト<br><span class="photoCategory__text--small">PHOTO</span></p>
+        </div>
+        
         <ul class="photoCategory__list">
         <?php 
             $parent_category = get_category_by_slug('photo');
@@ -54,7 +61,11 @@
     
     <!-- lifeカテゴリーの子カテゴリー一覧 -->
     <div class="lifeCategory mb--md">
-        <img src="<?php echo get_template_directory_uri()?>/images/life.jpg" alt="" class="lifeCategory__image" width="100%" height="200px" style="object-fit: cover;">
+        <div class="codeCategory__imageContainer">
+            <img src="<?php echo get_template_directory_uri()?>/images/life.jpg" alt="" class="lifeCategory__image" width="100%" height="200px">
+            <p class="codeCategory__text">暮らしのコト<br><span class="photoCategory__text--small">LIFE</span></p>
+        </div>
+        
         <ul class="lifeCategory__list">
         <?php 
             $parent_category = get_category_by_slug('life');

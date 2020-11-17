@@ -1,0 +1,36 @@
+.popular {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+
+    &__image {
+        position: relative;
+        text-align: center;
+    }
+
+    &__thumbnail {
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__title--num {
+        @include sectionTitleNum;
+    }
+
+    &__details {
+        margin: 0 auto;
+        margin-top: 16px;
+    }
+
+    &__detailTitle {
+        font-size: 12px;
+    }
+}

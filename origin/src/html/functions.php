@@ -36,4 +36,15 @@ function setPostViews($postID) {
     }
 }
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+/*
+サムネイル画像を呼び出す
+*/
+function thumb_url( $size ) {
+    if( has_post_thumbnail() ) {
+        $postthumb =wp_get_attachment_image_src( get_post_thumbnail_id(), $size );
+        $url = $postthumb[0];
+    }
+    return $url;
+    }
 ?>

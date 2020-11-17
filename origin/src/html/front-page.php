@@ -2,6 +2,7 @@
 <body>
     <!-- メインビジュアル -->
     <header class="mainVisual mb--md">
+        <h1 class="mainVisual__title">shoublog</h1>
         <img src="<?php echo get_template_directory_uri(); ?>/images/mainVisual.jpg" class="mainVisual__image" alt="やましょうのブログのメインビジュアルです。" width="100%" height="200px">
     </header>
     <!-- メインビジュアル -->
@@ -22,7 +23,7 @@
         );
         $the_query = new WP_Query($args);
     ?>
-    <section class="popular mb--md">
+    <section class="popular">
         <h2 class="popular__title"><span class="popular__title--num">01</span>POPULAR</h2>
 
         <ul class="popular__list">
@@ -33,13 +34,13 @@
             <li class="popular__item">
                 <div class="popular__image">
                     <a href="<?php the_permalink(); ?>" class="popular__link">
-                        <?php the_post_thumbnail('medium'); ?>
+                        <img src="<?php echo thumb_url( 'large' );?>" class="popular__thumbnail" alt="">
                     </a>
                 </div>
 
                 <div class="popular__details">
                     <a href="<?php the_permalink(); ?>" class="popular__link">
-                        <?php the_title(); ?>
+                        <h2 class="popular__detailTitle"><?php the_title(); ?></h2>
                     </a>
                 </div>
             </li>
@@ -65,7 +66,7 @@
             );
             $the_query = new WP_Query($args);
         ?>
-        <article class="codeArticle mb--lr">
+        <article class="codeArticle">
             <h2 class="codeArticle__title"><span class="codeArticle__title--num">02</span>CODE</h2>
             <ul class="codeArticle__list">
             <?php if ($the_query->have_posts()) :?>
@@ -74,17 +75,17 @@
                     <div class="codeArticle__image">
                         <a href="<?php the_permalink(); ?>" class="codeArticle__link">
                             <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('medium'); ?>
+                                <img src="<?php echo thumb_url( 'large' );?>" class="codeArticle__thumbnail" alt="">
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="300px" height="200px">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="100%" height="200px">
                             <?php endif; ?>
                         </a>
                     </div>
                     
                     <div class="codeArticle__details">
                         <a href="<?php the_permalink(); ?>" class="codeArticle__link">
-                            <span class="codeArticle__time"><?php the_time('Y/n/j'); ?></span><br>
-                            <?php the_title(); ?>
+                            <span class="codeArticle__time"><?php the_time('Y/n/j'); ?></span>
+                            <h2 class="codeArticle__detailTitle"><?php the_title(); ?></h2>
                         </a>
                     </div>
                 </li>
@@ -116,7 +117,7 @@
 
             $the_query = new WP_Query($args);
         ?>
-        <article class="photoArticle mb--lr">
+        <article class="photoArticle">
             <h2 class="photoArticle__title"><span class="photoArticle__title--num">03</span>PHOTO</h2>
             <?php if ($the_query->have_posts()) :?>
             <ul class="photoArticle__list">
@@ -125,17 +126,17 @@
                     <div class="photoArticle__image">
                         <a href="<?php the_permalink(); ?>" class="photoArticle__link">
                             <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('medium'); ?>
+                                <img src="<?php echo thumb_url( 'large' );?>" class="photoArticle__thumbnail" alt="">
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="300px" height="200px">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="100%" height="200px">
                             <?php endif; ?>
                         </a>
                     </div>
                     
                     <div class="photoArticle__details">
-                        <a href="<?php the_permalink(); ?>" class="photoArticle__link">
-                            <span class="photoArticle__time"><?php the_time('Y/n/j'); ?></span><br>
-                            <?php the_title(); ?>
+                        <a href="<?php the_permalink(); ?>" class="codeArticle__link">
+                            <span class="codeArticle__time"><?php the_time('Y/n/j'); ?></span>
+                            <h2 class="codeArticle__detailTitle"><?php the_title(); ?></h2>
                         </a>
                     </div>
                 </li>
@@ -165,7 +166,7 @@
                 );
                 $the_query = new WP_Query($args);
         ?>
-        <article class="lifeArticle mb--lr">
+        <article class="lifeArticle">
             <h2 class="lifeArticle__title"><span class="lifeArticle__title--num">04</span>LIFE</h2>
             <?php if ($the_query->have_posts()):?>
             <ul class="lifeArticle__list">
@@ -174,17 +175,17 @@
                         <div class="lifeArticle__image">
                             <a href="<?php the_permalink(); ?>" class="lifeArticle__link">
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('medium'); ?>
+                                    <img src="<?php echo thumb_url( 'large' );?>" class="lifeArticle__thumbnail" alt="">
                                 <?php else : ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="300px" height="200px">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="100%" height="200px">
                                 <?php endif; ?>
                             </a>
                         </div>
                         
                         <div class="lifeArticle__details">
-                            <a href="<?php the_permalink(); ?>" class="lifeArticle__link">
-                                <span class="lifeArticle__time"><?php the_time('Y/n/j'); ?></span><br>
-                                <?php the_title(); ?>
+                            <a href="<?php the_permalink(); ?>" class="codeArticle__link">
+                                <span class="codeArticle__time"><?php the_time('Y/n/j'); ?></span>
+                                <h2 class="codeArticle__detailTitle"><?php the_title(); ?></h2>
                             </a>
                         </div>
                     </li>
@@ -207,16 +208,13 @@
     <!-- lifeの記事 -->
 
     <!-- 自己紹介 -->
-    <section class="about mb--lr">
+    <section class="about">
         <h2 class="about__title"><span class="about__title--num">05</span>ABOUT</h2>
         <div class="about__item">
             <a href="" class="about__link">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/me.jpg" class="about__image" alt="#" width="100%" height="200px">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/me.jpg" class="about__image" alt="#" width="100%" height="auto">
             </a>
         </div>
-        <button class="about__btn">
-            <a href="<?php echo get_permalink(2227); ?>" class="about__link">もっと知る</a>
-        </button>
     </section>
     <!-- 自己紹介 -->
 
