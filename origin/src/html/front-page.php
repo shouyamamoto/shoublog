@@ -118,7 +118,7 @@
         <?php 
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 4,
                     'category_name' => 'life',
                 );
                 $the_query = new WP_Query($args);
@@ -174,7 +174,11 @@
         </div>
     </section>
     <!-- 自己紹介 -->
+    
+    <!-- 検索フォーム -->
+    <?php get_search_form(); ?>
 
+    <!-- カテゴリー一覧 -->
     <?php get_template_part('template-parts/category', 'list')?>
 
 <?php get_footer(); ?>

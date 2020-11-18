@@ -68,17 +68,6 @@
         padding: 20px ;
     }
 
-    // パンくずリスト
-    .breadcrumb {
-        border-top: 1px solid $cBlack;
-        border-bottom: 1px solid $cBlack;
-        padding: 10px 0;
-        margin-top: 20px;
-    }
-    .breadcrumb__inner {
-        font-size: 12px;
-    }
-
     &__label {
         list-style: none;
     }
