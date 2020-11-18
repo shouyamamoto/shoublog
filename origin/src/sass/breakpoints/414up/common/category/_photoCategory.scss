@@ -1,4 +1,4 @@
-.codeCategory {
+.photoCategory {
     &__list {
         display: flex;
         justify-content: space-between;
@@ -12,13 +12,12 @@
         margin-top: 10px;
     }
 
-    &__imageContainer {
-        position: relative;
+    &__image {
+        object-fit: cover;
     }
 
-    &__image {
-        position: relative;
-        object-fit: cover;
+    &__link {
+        font-size: 14px;
     }
 
     &__text {

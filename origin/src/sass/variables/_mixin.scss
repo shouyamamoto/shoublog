@@ -6,7 +6,8 @@
 
 @mixin sectionStyleBgc {
     background-color: $cGrayWhite;
-    margin: 0 calc(50% - 50vw) 80px;
+    margin: 0 auto 80px;
+    max-width: 480px;
     padding: 80px 0;
 }
 
@@ -18,11 +19,13 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.08em;
+    margin-bottom: 20px;
 }
 
 @mixin sectionTitleNum {
-    font-size: 48px;
-    margin-right: 48px;
+    font-family: 'Stalinist One', cursive;
+    font-size: 36px;
+    margin-right: 30px;
 }
 
 @mixin sectionTime {

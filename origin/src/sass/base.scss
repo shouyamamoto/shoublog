@@ -9,6 +9,12 @@ body {
 }
 
 
+
+
+img {
+    object-fit: cover;
+    height: auto;
+}
 @import "./breakpoints/414up/**/*.scss";
 
 @media (min-width: 768px) {

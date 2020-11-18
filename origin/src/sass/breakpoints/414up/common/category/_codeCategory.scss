@@ -1,4 +1,4 @@
-.lifeCategory {
+.codeCategory {
     &__list {
         display: flex;
         justify-content: space-between;
@@ -12,8 +12,17 @@
         margin-top: 10px;
     }
 
+    &__imageContainer {
+        position: relative;
+    }
+
     &__image {
+        position: relative;
         object-fit: cover;
+    }
+
+    &__link {
+        font-size: 14px;
     }
 
     &__text {

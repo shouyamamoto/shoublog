@@ -46,5 +46,25 @@ function thumb_url( $size ) {
         $url = $postthumb[0];
     }
     return $url;
-    }
+}
+
+/*
+上下線見出し
+*/
+function borderTitle_func($atts) {
+    return "
+        <h2 class=\"border-title\">". $atts['title'] ."<h2>
+    ";
+}
+add_shortcode('borderTitle', 'borderTitle_func');
+
+/*
+左線見出し
+*/
+function borderLeftTitle_func($atts) {
+    return "
+        <h3 class=\"borderLeft-title\">". $atts['title'] ."<h3>
+    ";
+}
+add_shortcode('borderLeftTitle', 'borderLeftTitle_func');
 ?>

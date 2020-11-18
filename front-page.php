@@ -1,18 +1,4 @@
-<?php get_header(); ?> <body><!-- メインビジュアル --><header class="mainVisual mb--md"><h1 class="mainVisual__title">shoublog</h1><img src="<?php echo get_template_directory_uri(); ?>/images/mainVisual.jpg" class="mainVisual__image" alt="やましょうのブログのメインビジュアルです。" width="100%" height="200px"></header><!-- メインビジュアル --> <?php get_template_part('template-parts/nav', 'bar'); ?> <!-- よく読まれている記事 --><!-- 3件ループ --> <?php
-        // views post metaで記事のPV情報を取得する
-        setPostViews(get_the_ID());
-
-        $args = array(
-            'meta_key' => 'post_views_count',
-            'orderby' => 'meta_value_num',
-            'order' => 'DESC',
-            'posts_per_page' => 3, // ← 3件取得
-        );
-        $the_query = new WP_Query($args);
-    ?> <section class="popular"><h2 class="popular__title"><span class="popular__title--num">01</span>POPULAR</h2><ul class="popular__list"> <?php 
-                // WP_Queryによるループ
-                if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
-            ?> <li class="popular__item"><div class="popular__image"><a href="<?php the_permalink(); ?>" class="popular__link"><img src="<?php echo thumb_url( 'large' );?>" class="popular__thumbnail" alt=""></a></div><div class="popular__details"><a href="<?php the_permalink(); ?>" class="popular__link"><h2 class="popular__detailTitle"><?php the_title(); ?></h2></a></div></li> <?php endwhile; ?> <?php wp_reset_postdata(); ?> <?php else : ?> <p>記事がありません。</p> <?php endif; ?> </ul><span class="popular__arrow--left"></span> <span class="popular__arrow--right"></span></section><!-- よく読まれている記事 --><!-- 記事一覧 --><section class="article"><!-- codeの記事 --> <?php 
+<?php get_header(); ?> <body><!-- メインビジュアル --><header class="mainVisual mb--md"><h1 class="mainVisual__title">shoublog</h1><img src="<?php echo get_template_directory_uri(); ?>/images/mainVisual.jpg" class="mainVisual__image" alt="やましょうのブログのメインビジュアルです。" width="100%" height="200px"></header><!-- メインビジュアル --> <?php get_template_part('template-parts/nav', 'bar'); ?> <!-- よく読まれている記事 --> <?php get_template_part('template-parts/popular');?> <!-- よく読まれている記事 --><!-- 記事一覧 --><section class="article"><!-- codeの記事 --> <?php 
             $args = array(
                 'post_type' => 'post',
                 'category_name' => 'code',

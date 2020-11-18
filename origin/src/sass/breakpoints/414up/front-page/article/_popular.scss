@@ -9,6 +9,11 @@
         text-align: center;
     }
 
+    &__list {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     &__thumbnail {
         width: 100%;
         object-fit: cover;
@@ -28,6 +33,10 @@
     &__details {
         margin: 0 auto;
         margin-top: 16px;
+    }
+
+    &__time {
+        @include sectionTime;
     }
 
     &__detailTitle {
