@@ -39,7 +39,7 @@
             );
             $the_query = new WP_Query($args);
         ?>
-        <article class="lifeArticle">
+        <article class="lifeArticle single-post">
             <h2 class="lifeArticle__title">RECOMMEND</h2>
             <?php if ($the_query->have_posts()):?>
             <ul class="lifeArticle__list">
@@ -79,7 +79,7 @@
             );
             $the_query = new WP_Query($args);
         ?>
-        <article class="codeArticle">
+        <article class="codeArticle single-post">
             <h2 class="codeArticle__title">RECOMMEND</h2>
             <ul class="codeArticle__list">
             <?php if ($the_query->have_posts()) :?>
@@ -119,7 +119,7 @@
 
             $the_query = new WP_Query($args);
         ?>
-        <article class="photoArticle">
+        <article class="photoArticle single-post">
             <h2 class="photoArticle__title">RECOMMEND</h2>
             <?php if ($the_query->have_posts()) :?>
             <ul class="photoArticle__list">
