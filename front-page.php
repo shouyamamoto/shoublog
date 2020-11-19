@@ -104,12 +104,12 @@
                 <?php endif; ?>
             </ul>
             <button class="photoArticle__btn">
-            <?php 
-                $category_id = get_cat_ID('photo');
-                $category_link = get_category_link($category_id);
-            ?>
-            <a href="<?php echo esc_url( $category_link ); ?>" class="photoArticle__link">もっと読む</a>
-        </button>
+                <?php 
+                    $category_id = get_cat_ID('photo');
+                    $category_link = get_category_link($category_id);
+                ?>
+                <a href="<?php echo esc_url( $category_link ); ?>" class="photoArticle__link">もっと読む</a>
+            </button>
         </article>
         
         <!-- photoの記事 -->

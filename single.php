@@ -28,7 +28,6 @@
     $cat = get_the_category();
     $cat_name = $cat[0]->cat_name;
     ?>
-    <!-- 記事のカテゴリーによっておすすめするものを変える -->
     <?php if($cat_name === 'LIFE'): ?>
         <!-- lifeの記事 -->
         <?php 
@@ -66,6 +65,13 @@
                 <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
             </ul>
+            <button class="lifeArticle__btn">
+                <?php 
+                    $category_id = get_cat_ID('life');
+                    $category_link = get_category_link($category_id);
+                ?>
+                <a href="<?php echo esc_url( $category_link ); ?>" class="lifeArticle__link">もっと読む</a>
+            </button>
         </article>
         </section>
         <!-- lifeの記事 -->
@@ -106,6 +112,13 @@
             <?php wp_reset_postdata(); ?>
             <?php endif; ?>
             </ul>
+            <button class="codeArticle__btn">
+                <?php 
+                    $category_id = get_cat_ID('code');
+                    $category_link = get_category_link($category_id);
+                ?>
+                <a href="<?php echo esc_url( $category_link ); ?>" class="codeArticle__link">もっと読む</a>
+            </button>
         </article>
         <!-- codeの記事 -->
     <?php elseif($cat_name === 'PHOTO'): ?>
@@ -148,11 +161,25 @@
                     <p>記事がありません。</p>
                 <?php endif; ?>
             </ul>
+            <button class="photoArticle__btn">
+                <?php 
+                    $category_id = get_cat_ID('photo');
+                    $category_link = get_category_link($category_id);
+                ?>
+                <a href="<?php echo esc_url( $category_link ); ?>" class="photoArticle__link">もっと読む</a>
+            </button>
         </article>
         <!-- photoの記事 -->
     <?php endif; ?>
+    <!-- 同じカテゴリーの記事を表示させる -->
 
+    <!-- 人気記事表示 -->
     <?php get_template_part('template-parts/popular'); ?>
+    <!-- 人気記事表示 -->
+
+    <!-- 検索フォーム -->
+    <?php get_search_form(); ?>
+    <!-- 検索フォーム -->
 
     <!-- カテゴリー一覧 -->
     <?php get_template_part('template-parts/category', 'list'); ?>
