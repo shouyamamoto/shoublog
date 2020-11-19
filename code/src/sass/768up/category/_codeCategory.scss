@@ -1,0 +1,43 @@
+.codeCategory {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 48%;
+        text-align: center;
+        background-color: $cGrayWhite;
+        margin-top: 10px;
+    }
+
+    &__imageContainer {
+        position: relative;
+    }
+
+    &__image {
+        position: relative;
+        object-fit: cover;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        z-index: 1;
+
+        &--small {
+            font-size: 12px;
+        }
+    }
+}

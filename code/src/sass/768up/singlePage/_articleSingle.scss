@@ -1,0 +1,90 @@
+.articleSingle {
+    width: 90%;
+    margin: 40px auto 80px;
+    
+    /*
+    記事内のpスタイル
+    */
+    p {
+        line-height: 2;
+        margin: 40px 0;
+        font-size: 14px;
+    }
+    /*
+    記事内のpスタイル終わり
+    */
+
+    /*
+    タイトルの基本設定
+    */
+    h2 {
+        font-size: 22px;
+        margin: 40px 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 40px 0;
+    }
+    /*
+    タイトルの基本設定終わり
+    */
+
+    /*
+    ショートコードのタイトル用
+    */
+    .border-title {
+        border-top: 2px solid $cBlack;
+        border-bottom: 2px solid $cBlack;
+        padding: 6px 0;
+    }
+
+    .borderLeft-title {
+        border-left: 2px solid #000;
+        padding-left: 10px;
+    }
+    /*
+    ショートコードのタイトル用終わり
+    */
+
+    // 記事のラベル
+    .post-categories li{
+        display: inline;
+        padding: 4px 8px;
+        list-style: none;
+        font-size: 12px;
+        background-color: $cGrayWhite;
+    }
+
+    // 画像を横幅いっぱいに表示
+    .wp-block-image {
+        height: auto;
+        margin: 20px calc(50% - 50vw);
+    }
+
+    // リストのスタイル
+    .border-ul {
+        border: 1px solid $cBlack;
+        padding: 20px ;
+    }
+
+    &__label {
+        list-style: none;
+    }
+
+    &__time {
+        text-align: center;
+        margin: 40px auto;
+        display: block;
+        color: $cGray;
+    }
+
+    &__title {
+        margin: 20px 0;
+        font-size: 20px;
+    }
+
+    &__thumbnail {
+        width: 100%;
+    }
+}
