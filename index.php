@@ -1,110 +1,48 @@
 <?php get_header(); ?>
     <?php get_template_part('template-parts/nav', 'bar'); ?>
-    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <!-- 検索フォーム -->
-    <div class="search">
-        <h2 class="search__title--en">SEARCH<br>
-            <span class="search__title--ja">記事を検索する</span>
-        </h2>
-
-        <form action="/" method="get" class="search__form">
-            <input type="text" name="s" placeholder="検索する...">
-        </form>
-
-        <ul class="search__list">
-            <li class="search__item">
-                <a href="" class="search__link">wordpress</a>
-            </li>
-            <li class="search__item">
-                <a href="" class="search__link">photo</a>
-            </li>
-            <li class="search__item">
-                <a href="" class="search__link">XT-10</a>
-            </li>
-            <li class="search__item">
-                <a href="" class="search__link">work</a>
-            </li>
-        </ul>
-    </div>
+    <?php get_search_form(); ?>
     <!-- 検索フォーム -->
 
-    <!-- 検索結果 -->
-    <div class="searchResults">
-        <p class="searchResults__label">...の検索結果</p>
-
-        <ul class="searchResults__list">
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
+    <!-- カテゴリー検索結果 -->
+    <div class="archiveResults">
+        <p class="archiveResults__label"><?php single_cat_title(); ?></p>
+        <?php if (have_posts()): ?>
+        <ul class="archiveResults__list">
+            <?php while(have_posts()): the_post(); ?>
+            <li class="archiveResults__item mb--sm">
+                <a href="" class="archiveResults__link">
+                    <div class="archiveResults__image">
+                        <a href="<?php the_permalink(); ?>" class="archiveResults__link">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <img src="<?php echo thumb_url( 'large' );?>" class="archiveResults__thumbnail" alt="">
+                            <?php else : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" class="no-image" alt="サムネイルがありません。" width="100%" height="200px">
+                            <?php endif; ?>
+                        </a>
+                    </div>
+                        
+                    <div class="archiveResults__details">
+                        <a href="<?php the_permalink(); ?>" class="archiveResults__link">
+                            <span class="archiveResults__time"><?php the_time('Y/n/j'); ?></span>
+                            <h2 class="archiveResults__detailTitle"><?php the_title(); ?></h2>
+                        </a>
+                    </div>
                 </a>
             </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
-            <li class="searchResults__item">
-                <p class="searchResults__listLabel">code</p>
-                <a href="" class="searchResults__link">
-                    <img src="" alt="" class="searchResults__image">
-                    <p class="searchResults__caption"></p>
-                </a>
-            </li>
+            <?php endwhile;?>
         </ul>
+        <?php else: ?>
+            <p>記事は見つかりませんでした。ほかのキーワードで検索するか、やましょうに依頼してみてください！</p>
+        <?php endif; ?>
+        <!-- カテゴリー検索結果 -->
+
+        <!-- ページナビ -->
+        <?php if (function_exists( 'wp_pagenavi')) { wp_pagenavi();} ?>
+        
+        <!-- パンくずリスト -->
+        <?php get_template_part('template-parts/breadcrumb'); ?>
     </div>
     <!-- 検索結果 -->
 
