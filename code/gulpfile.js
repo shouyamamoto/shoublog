@@ -13,22 +13,8 @@ const notify = require('gulp-notify');
 // ベンダープレフィックスを自動付与
 const autoprefixer = require('gulp-autoprefixer');
 
-// 書き出したファイル名をリネームする
-const rename = require('gulp-rename');
-
 // jsの圧縮
 const babel = require('gulp-babel');
-
-// htmlの圧縮
-const htmlmin = require('gulp-htmlmin');
-
-// 画像の圧縮
-const imagemin = require('gulp-imagemin');
-const changed = require('gulp-changed');
-const imageminJpg = require('imagemin-jpeg-recompress');
-const imageminPng = require('imagemin-pngquant');
-const imageminGif = require('imagemin-gifsicle');
-const imageminSvgo = require('imagemin-svgo');
 
 const { src, dest, watch } = require('gulp');
 
@@ -52,34 +38,8 @@ const jsTask = () => {
         .pipe(dest('../js', {sourcemaps: true}))
 }
 
-// 画像のコンパイル
-const imgTask = () => {
-    src('./src/images/**')
-        .pipe(changed('dist/images'))
-        .pipe(imagemin([
-            imageminPng(),
-            imageminJpg(),
-            imageminGif({
-                interlaced: false,
-                optimizationLevel: 3,
-                colors: 180
-            }),
-            imagemin.svgo()
-        ]))
-        .pipe(dest('../images'))
-}
-
-//htmlのコンパイル
-const htmlTask = () => {
-    return src('./src/html/**')
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(dest('../'))
-}
-
 const keiryoWatch = () => {
     watch('./src/sass/*.scss', cssTask)
     watch('./src/js/**', jsTask)
-    watch('./src/images/**', imgTask)
-    watch('./src/html/**', htmlTask)
 }
 exports.keiryoWatch = keiryoWatch;

@@ -11,22 +11,20 @@ body {
 
 
 
-
-
 img {
     object-fit: cover;
     height: auto;
 }
-@import "./breakpoints/414up/**/*.scss";
+@import "./414up/**/*.scss";
 
 @media (min-width: 768px) {
-    @import "./breakpoints/768up/**/*.scss";
+    @import "./768up/**/*.scss";
 }
 
 @media (min-width: 1024px) {
-    @import "./breakpoints/1024up/**/*.scss";
+    @import "./1024up/**/*.scss";
 }
 
 @media (min-width: 1440px) {
-    @import "./breakpoints/1440up/**/*.scss";
+    @import "./1440up/**/*.scss";
 }
