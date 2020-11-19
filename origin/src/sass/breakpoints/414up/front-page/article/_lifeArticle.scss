@@ -1,6 +1,15 @@
 .lifeArticle {
     @include sectionStyleBgc;
 
+    /*****************************************
+    個別投稿ページのRECOMMENDとして表示させる場合には背景色を白に変更,
+    余白も削除
+    *****************************************/
+    &.singlePost {
+        background-color: $cWhite;
+        padding: 0;
+    }
+    
     &__item {
         display: flex;
         justify-content: space-between;

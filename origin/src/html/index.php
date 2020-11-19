@@ -1,10 +1,6 @@
 <?php get_header(); ?>
-    <!-- メインビジュアル -->
-    <header class="mainVisual"></header>
-    <!-- メインビジュアル -->
-    
-    
     <?php get_template_part('template-parts/nav', 'bar'); ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
 
     <!-- 検索フォーム -->
     <div class="search">

@@ -1,6 +1,6 @@
 .articleSingle {
     width: 90%;
-    margin: 80px auto;
+    margin: 40px auto 80px;
     
     /*
     記事内のpスタイル
@@ -66,11 +66,6 @@
     .border-ul {
         border: 1px solid $cBlack;
         padding: 20px ;
-    }
-
-    // パンくずリスト
-    .breadcrumb__inner {
-        font-size: 12px;
     }
 
     &__label {
