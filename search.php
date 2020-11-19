@@ -39,11 +39,11 @@
             <p>記事は見つかりませんでした。ほかのキーワードで検索するか、やましょうに依頼してみてください！</p>
         <?php endif; ?>
 
-        <!-- パンくずリスト -->
-        <?php get_template_part('template-parts/breadcrumb');?>
-
         <!-- ページナビ -->
         <?php if (function_exists( 'wp_pagenavi')) { wp_pagenavi();} ?>
+
+        <!-- パンくずリスト -->
+        <?php get_template_part('template-parts/breadcrumb');?>
     </div>
     <!-- 検索結果 -->
     
