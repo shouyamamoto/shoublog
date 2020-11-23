@@ -39,7 +39,7 @@ const jsTask = () => {
 }
 
 const keiryoWatch = () => {
-    watch('./sass/*.scss', cssTask)
+    watch('./sass/**/*.scss', cssTask)
     watch('./js/**', jsTask)
 }
 exports.keiryoWatch = keiryoWatch;

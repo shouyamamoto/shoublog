@@ -2,63 +2,26 @@
     .archiveResults {
         max-width: 90%;
     
-        &.current-item {
-            background-color: transparent;
-            padding: 0;
-            margin: 0;
-        }
-        &.breadcrumb {
-            margin: 40px;
-        }
-    
-        &__label {
-            font-size: 14px;
-            margin-bottom: 40px;
-        }
-        &__item {
-            display: flex;
-            justify-content: space-between;
-        }
-    
         &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             width: 100%;
             margin: 0 auto;
         }
-    
-        &__image {
-            position: relative;
-            text-align: center;
-            flex-basis: 45%;
+
+        &__item {
+            flex-basis: 48%;
+            flex-direction: column;
         }
-    
+
         &__thumbnail {
-            width: 100%;
-            object-fit: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    
-        &__title {
-            @include sectionTitle;
-        }
-    
-        &__title--num {
-            @include sectionTitleNum;
+            height: 198.66px;
         }
     
         &__details {
-            flex-basis: 55%;
-            margin: 0 auto;
-            margin-left: 10px;
-        }
-    
-        &__detailTitle {
-            font-size: 12px;
-        }
-    
-        &__time {
-            @include sectionTime;
+            margin-top: 10px;
+            margin-left: 0;
         }
     }
 }

@@ -1,0 +1,17 @@
+@media (min-width: 1024px) {
+    .articleSingle {
+        width: 70% !important;
+
+        p {
+            font-size: 16px !important;
+        }
+
+        .post-categories li{
+            font-size: 14px !important;
+        }
+
+        &__title {
+            font-size: 28px !important;
+        }
+    }
+}
