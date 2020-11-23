@@ -1,36 +1,24 @@
-.search {
-    width: 100%;
-    max-width: 100%;
-
-    &.current-item {
-        background-color: transparent;
-        padding: 0;
-        margin: 40px 0;
-    }
-
-    &__title {
-        @include sectionTitle;
-    }
-
-    &__area {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $cWhite;
-        max-width: 480px;
-        margin: 0 auto;
-    }
-
-    &__form {
-        background-color: $cWhite;
+@media (min-width: 768px) {
+    .search {
         width: 100%;
-        height: 60px;
-    }
-
-    &__icon {
-        width: 24px;
-        height: 24px;
-        background-color: $cWhite;
-    }
-
+        max-width: 100%;
+    
+        &__area {
+            max-width: 480px;
+            margin: 0 auto
+        }
+    
+        &__form {
+            background-color: $cWhite;
+            width: 100%;
+            height: 60px;
+        }
+    
+        &__icon {
+            width: 24px;
+            height: 24px;
+            background-color: $cWhite;
+        }
+    
+    }    
 }
