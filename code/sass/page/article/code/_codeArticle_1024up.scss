@@ -1,5 +1,5 @@
-@media (min-width: 768px) {
-    .photoArticle {
+@media (min-width: 1024px) {
+    .codeArticle {
         width: 100%;
         max-width: 100%;
 
@@ -10,7 +10,7 @@
         &__list {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
 
         &__item:first-child {

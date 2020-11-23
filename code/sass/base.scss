@@ -1,6 +1,5 @@
 @import "./variables/*.scss";
 
-
 body {
     font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
     line-height: 1.7;
@@ -12,6 +11,7 @@ body {
 img {
     height: auto;
 }
+
 
 @import "./common/**/*.scss";
 @import "./page/**/*.scss";

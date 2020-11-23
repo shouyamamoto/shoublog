@@ -1,0 +1,13 @@
+@media (min-width: 1024px) {
+    .category {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
