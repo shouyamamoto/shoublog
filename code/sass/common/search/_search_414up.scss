@@ -35,4 +35,24 @@
         background-color: $cWhite;
     }
 
+    &__list {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    &__item {
+        display: inline;
+        background-color: #fff;
+        margin: 10px 10px 0 0;
+        padding: 2px 4px;
+        font-size: 14px;
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }
+
 }

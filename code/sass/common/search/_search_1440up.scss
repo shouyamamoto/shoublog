@@ -19,6 +19,9 @@
             height: 24px;
             background-color: $cWhite;
         }
-    
+        
+        &__list {
+            width: 50% !important;
+        }
     }    
 }
