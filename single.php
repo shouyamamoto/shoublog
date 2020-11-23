@@ -16,6 +16,7 @@
             <div class="articleSingle__content">
                 <?php the_content(); ?>
             </div>
+            
 
             <?php get_template_part('template-parts/breadcrumb'); ?>
         </article>

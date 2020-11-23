@@ -9,11 +9,9 @@ body {
 }
 
 img {
-    object-fit: cover;
     height: auto;
 }
 
 @import "./common/**/*.scss";
 @import "./page/**/*.scss";
 @import "./post/**/*.scss";
-

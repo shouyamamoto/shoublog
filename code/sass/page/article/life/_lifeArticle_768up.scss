@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+    .lifeArticle {
+        width: 100%;
+        max-width: 768px;
+
+        &.singlePost {
+            margin-bottom: 120px;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__item:first-child {
+            flex-direction: row;
+        }
+    
+        &__item:first-child &__details {
+            margin-left: 10px;
+            margin-top: 0;
+        }
+
+        &__item {
+            flex-basis: 48%;
+        }
+    
+        &__title {
+            @include sectionTitle;
+            margin-bottom: 60px;
+        }
+
+        &__btn {
+            @include sectionBtn;
+            margin-top: 20px;
+        }
+    }
+}
