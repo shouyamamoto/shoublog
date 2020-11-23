@@ -10,6 +10,12 @@
         text-align: center;
         background-color: $cGrayWhite;
         margin-top: 10px;
+        transition: all .3s;
+    }
+
+    &__item:hover {
+        background-color: $cBlack;
+        color: $cGrayWhite;
     }
 
     &__imageContainer {
