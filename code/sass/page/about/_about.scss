@@ -2,7 +2,21 @@
     @include sectionStyle;
 
     &__item {
+        display: flex;
+        justify-content: space-between;
         text-align: center;
+
+        &--sns {
+            margin-top: 10px;
+            flex-basis: 49%;
+            background-color: $cGrayWhite;
+            transition: all 0.4s;
+        }
+
+        &--sns:hover {
+            background-color: $cBlack;
+            color: $cWhite;
+        }
     }
 
     &__image {
