@@ -28,6 +28,11 @@
         position: relative;
         text-align: center;
         flex-basis: 45%;
+        transition: all 0.4s;
+    }
+
+    &__image:hover {
+        transform: translateY(-10px);
     }
 
     &__thumbnail {
