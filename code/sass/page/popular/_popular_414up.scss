@@ -6,7 +6,13 @@
     &__image {
         position: relative;
         text-align: center;
+        transition: all 0.4s;
     }
+
+    &__image:hover {
+        transform: translateY(-10px);
+    }
+
 
     &__list {
         width: 90%;
