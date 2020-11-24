@@ -40,7 +40,8 @@
             $the_query = new WP_Query($args);
         ?>
         <article class="lifeArticle singlePost">
-            <h2 class="lifeArticle__title">RECOMMEND</h2>
+            <h2 class="lifeArticle__title">オススメの記事</h2>
+            <span class="lifeArticle__title--en">RECOMMEND</span>
             <?php if ($the_query->have_posts()):?>
             <ul class="lifeArticle__list">
                 <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -87,7 +88,8 @@
             $the_query = new WP_Query($args);
         ?>
         <article class="codeArticle singlePost">
-            <h2 class="codeArticle__title">RECOMMEND</h2>
+            <h2 class="codeArticle__title">オススメの記事</h2>
+            <span class="codeArticle__title--en">RECOMMEND</span>
             <ul class="codeArticle__list">
             <?php if ($the_query->have_posts()) :?>
             <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -134,7 +136,8 @@
             $the_query = new WP_Query($args);
         ?>
         <article class="photoArticle singlePost">
-            <h2 class="photoArticle__title">RECOMMEND</h2>
+            <h2 class="photoArticle__title">オススメの記事</h2>
+            <span class="photoArticle__title--en">RECOMMEND</span>
             <?php if ($the_query->have_posts()) :?>
             <ul class="photoArticle__list">
                 <?php while($the_query->have_posts()) : $the_query->the_post() ; ?>

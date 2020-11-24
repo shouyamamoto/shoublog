@@ -11,6 +11,9 @@
 
     &__title {
         @include sectionTitle;
-        margin-bottom: 40px;
+    }
+
+    &__title--en {
+        @include sectionTitleEN;
     }
 }

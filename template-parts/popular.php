@@ -13,12 +13,8 @@
     $the_query = new WP_Query($args);
 ?>
 <section class="popular">
-    <?php if(is_single() || is_search()) :?>
-        <h2 class="popular__title">POPULAR</h2>
-    <?php else : ?>
-        <h2 class="popular__title">人気の記事</h2>
-        <span class="popular__title--en">POPULAR</span>
-    <?php endif; ?>
+    <h2 class="popular__title">人気の記事</h2>
+    <span class="popular__title--en">POPULAR</span>
 
     <ul class="popular__list">
         <?php 

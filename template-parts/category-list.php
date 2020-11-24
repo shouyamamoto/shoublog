@@ -1,6 +1,7 @@
 <!-- カテゴリー一覧 -->
 <section class="category mb--lr" id="category">
-    <h2 class="category__title">CATEGORY</h2>
+    <h2 class="category__title">カテゴリー</h2>
+    <span class="category__title--en">CATEGORIES</span>
 
     <div class="category__container">
         <!-- codeカテゴリーの子カテゴリー一覧 -->
