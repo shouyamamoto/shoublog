@@ -51,8 +51,8 @@
         @include sectionTitle;
     }
 
-    &__title--num {
-        @include sectionTitleNum;
+    &__title--en {
+        @include sectionTitleEN;
     }
 
     &__details {

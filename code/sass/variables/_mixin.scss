@@ -12,20 +12,21 @@
 }
 
 @mixin sectionTitle {
-    font-family: 'Anton', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     letter-spacing: 0.08em;
-    margin-bottom: 20px;
+    font-weight: 500;
 }
 
-@mixin sectionTitleNum {
-    font-family: 'Stalinist One', cursive;
-    font-size: 36px;
-    margin-right: 30px;
+@mixin sectionTitleEN {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    color: $cGray;
+    margin-bottom: 20px;
 }
 
 @mixin sectionTime {

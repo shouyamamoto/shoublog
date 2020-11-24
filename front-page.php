@@ -25,7 +25,8 @@
             $the_query = new WP_Query($args);
         ?>
         <article class="codeArticle">
-            <h2 class="codeArticle__title"><span class="codeArticle__title--num">02</span>CODE</h2>
+        <h2 class="codeArticle__title">コーディング</h2>
+        <span class="codeArticle__title--en">CODE</span>
             <ul class="codeArticle__list">
             <?php if ($the_query->have_posts()) :?>
             <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -75,7 +76,8 @@
             $the_query = new WP_Query($args);
         ?>
         <article class="photoArticle">
-            <h2 class="photoArticle__title"><span class="photoArticle__title--num">03</span>PHOTO</h2>
+        <h2 class="photoArticle__title">写真のコト</h2>
+        <span class="photoArticle__title--en">PHOTO</span>
             <?php if ($the_query->have_posts()) :?>
             <ul class="photoArticle__list">
                 <?php while($the_query->have_posts()) : $the_query->the_post() ; ?>
@@ -124,7 +126,8 @@
                 $the_query = new WP_Query($args);
         ?>
         <article class="lifeArticle">
-            <h2 class="lifeArticle__title"><span class="lifeArticle__title--num">04</span>LIFE</h2>
+        <h2 class="lifeArticle__title">暮らしのコト</h2>
+        <span class="lifeArticle__title--en">LIFE</span>
             <?php if ($the_query->have_posts()):?>
             <ul class="lifeArticle__list">
                 <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -166,7 +169,8 @@
 
     <!-- 自己紹介 -->
     <section class="about">
-        <h2 class="about__title"><span class="about__title--num">05</span>ABOUT</h2>
+        <h2 class="about__title">やましょうについて</h2>
+        <span class="about__title--en">ABOUT</span>
         <div class="about__item">
             <a href="" class="about__link">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/me.jpg" class="about__image" alt="#" width="100%" height="auto">

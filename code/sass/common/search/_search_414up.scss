@@ -15,6 +15,10 @@
         @include sectionTitle;
     }
 
+    &__title--en {
+        @include sectionTitleEN;
+    }
+
     &__area {
         display: flex;
         justify-content: space-between;

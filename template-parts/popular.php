@@ -16,7 +16,8 @@
     <?php if(is_single() || is_search()) :?>
         <h2 class="popular__title">POPULAR</h2>
     <?php else : ?>
-        <h2 class="popular__title"><span class="popular__title--num">01</span>POPULAR</h2>
+        <h2 class="popular__title">人気の記事</h2>
+        <span class="popular__title--en">POPULAR</span>
     <?php endif; ?>
 
     <ul class="popular__list">
