@@ -50,4 +50,9 @@
     <!-- カテゴリー一覧 -->
     <?php get_template_part('template-parts/category', 'list')?>
 
+    <!-- 自己紹介 -->
+    <?php get_template_part('template-parts/about'); ?>
+    <!-- 自己紹介 -->
+    
+
 <?php get_footer(); ?>
