@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<body>
+
     <!-- メインビジュアル -->
     <header class="mainVisual mb--md">
         <h1 class="mainVisual__title">shoublog</h1>

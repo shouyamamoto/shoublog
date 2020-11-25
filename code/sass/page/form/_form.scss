@@ -1,0 +1,45 @@
+.form {
+    &__inner {
+        margin-bottom: 40px;
+    }
+
+    &__inner:last-child {
+        margin-bottom: 0;
+    }
+
+    &__required {
+        background-color: #da5040;
+        color: $cWhite;
+        padding: 4px 6px;
+        margin-right: 10px;
+        font-size: 10px;
+    }
+
+    &__label {
+        font-size: 14px;
+    }
+
+    &__content {
+        margin-top: 10px;
+    }
+
+    &__area {
+        width: 100%;
+        border: 1px solid $cBlack;
+        padding: 8px 16px;
+    }
+}
+
+.btn {
+    background-color: $cBlack;
+    color: $cWhite;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+
+    &__back {
+        background-color: transparent;
+        color: $cBlack;
+        text-decoration: underline;
+    }
+}

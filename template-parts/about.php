@@ -2,7 +2,7 @@
     <h2 class="about__title">やましょうについて</h2>
     <span class="about__title--en">ABOUT</span>
     <div class="about__item">
-        <a href="" class="about__link">
+        <a href="<?php echo home_url('/about'); ?>" class="about__link">
             <img src="<?php echo get_template_directory_uri(); ?>/images/me.jpg" class="about__image" alt="#" width="100%" height="auto">
         </a>
     </div>

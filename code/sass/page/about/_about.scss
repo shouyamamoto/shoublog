@@ -19,6 +19,14 @@
         }
     }
 
+    &__link {
+        transition: all 0.4s;
+    }
+
+    &__link:hover {
+        transform: translateY(-10px);
+    }
+
     &__image {
         position: relative;
         text-align: center;
