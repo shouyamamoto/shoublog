@@ -3,6 +3,7 @@
     <!-- メインビジュアル -->
     <header class="mainVisual mb--md">
         <h1 class="mainVisual__title">shoublog</h1>
+        <p class="mainVisual__text">scroll</p>
         <img src="<?php echo get_template_directory_uri(); ?>/images/mainVisual.jpg" class="mainVisual__image" alt="やましょうのブログのメインビジュアルです。" width="100%" height="200px">
     </header>
     <!-- メインビジュアル -->

@@ -1,0 +1,50 @@
+.mainVisual {
+    position: relative;
+
+    &__title {
+        font-family: 'Anton', sans-serif;
+        font-size: 32px;
+        color: $cBlack;
+        margin-right: 40px;
+        position: absolute;
+        top: 2%;
+        left: 5%;
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+    }
+
+    &__text::before {
+        content: '';
+        width: 100px;
+        height: 1px;
+        background-color: $cBlack;
+        position: absolute;
+        bottom: 0;
+        left: -15px;
+        overflow: hidden;
+        animation: kf-scroll 1.2s infinite;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@keyframes kf-scroll {
+    0%,
+    50%,
+    100% {
+        transform: translateX(10px);
+    }
+
+    30% {
+        transform: none;
+    }
+}
