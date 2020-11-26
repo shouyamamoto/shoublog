@@ -1,3 +1,6 @@
+/******************************************
+    414px
+******************************************/
 .photoArticle {
     @include sectionStyle;
 
@@ -104,6 +107,97 @@
         & a {
             z-index: 2;
             color: $cWhite;
+        }
+    }
+}
+
+/******************************************
+    768px
+******************************************/
+@media (min-width: 768px) {
+    .photoArticle {
+        width: 100%;
+        max-width: 100%;
+
+        &.singlePost {
+            margin-bottom: 120px;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__item:first-child {
+            flex-direction: row;
+        }
+    
+        &__item:first-child &__details {
+            margin-left: 10px;
+            margin-top: 0;
+        }
+
+        &__item {
+            flex-basis: 48%;
+        }
+    
+        &__title {
+            @include sectionTitle;
+        }
+
+        &__btn {
+            @include sectionBtn;
+            margin-top: 20px;
+        }
+    }
+}
+
+/******************************************
+    1024px
+******************************************/
+@media (min-width: 1024px) {
+    .photoArticle {
+        &__list {
+            width: 80% !important;
+            flex-wrap: nowrap !important;
+        }
+
+        &__item:first-child,
+        &__item {
+            flex-basis: 24% !important;
+            flex-direction: column !important;
+        }
+
+        &__details {
+            margin-top: 10px !important;
+            margin-left: 0 !important;
+        }
+
+        &__detailTitle {
+            font-size: 14px !important;
+        }
+
+        &__thumbnail {
+            height: 120px !important;
+        }
+    }
+}
+
+/******************************************
+    1440px
+******************************************/
+
+@media (min-width: 1440px) {
+    .photoArticle {
+        &__thumbnail {
+            height: 186.23px !important;
+        }
+        &__detailTitle {
+            font-size: 16px !important;
+        }
+        &__btn a {
+            font-size: 16px !important;
         }
     }
 }

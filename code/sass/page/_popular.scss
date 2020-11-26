@@ -1,0 +1,124 @@
+/******************************************
+    414px
+******************************************/
+.popular {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto 120px;
+
+    &__image {
+        position: relative;
+        text-align: center;
+        transition: all 0.4s;
+    }
+
+    &__image:hover {
+        transform: translateY(-10px);
+    }
+
+
+    &__list {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    &__thumbnail {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__title--en {
+        @include sectionTitleEN;
+    }
+
+    &__details {
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    &__time {
+        @include sectionTime;
+    }
+
+    &__detailTitle {
+        font-size: 12px;
+    }
+}
+
+/******************************************
+    768px
+******************************************/
+@media (min-width: 768px) {
+    .popular {
+        max-width: 90%;
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__item {
+            flex-basis: 30%;
+        }
+
+        &__thumbnail {
+            height: 120px;
+        }
+    }
+}
+
+
+
+/******************************************
+    1024px
+******************************************/
+@media (min-width: 1024px) {
+    .popular {
+        &__detailTitle {
+            font-size: 14px !important;
+        }
+
+        &__thumbnail {
+            height: 160px !important;
+        }
+    }
+}
+
+/******************************************
+    1440px
+******************************************/
+@media (min-width: 1440px) {
+    .popular {
+        &__detailTitle {
+            font-size: 16px !important;
+        }
+
+        &__details {
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        &__thumbnail {
+            height: 200px !important;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

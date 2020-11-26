@@ -1,4 +1,7 @@
-.lifeCategory {
+/******************************************
+    414px
+******************************************/
+.codeCategory {
     &__list {
         display: flex;
         justify-content: space-between;
@@ -10,14 +13,20 @@
         text-align: center;
         background-color: $cGrayWhite;
         margin-top: 10px;
-        transition: all 0.3s;
+        transition: all .3s;
     }
+
     &__item:hover {
         background-color: $cBlack;
         color: $cGrayWhite;
     }
 
+    &__imageContainer {
+        position: relative;
+    }
+
     &__image {
+        position: relative;
         object-fit: cover;
     }
 
@@ -39,5 +48,25 @@
         &--small {
             font-size: 12px;
         }
+    }
+}
+
+/******************************************
+    768px
+******************************************/
+@media (min-width: 768px) {
+    .codeCategory {
+        &__image {
+            height: 200px;
+        }
+    }
+}
+
+/******************************************
+    1024px
+******************************************/
+@media (min-width: 1024px) {
+    .codeCategory {
+        flex-basis: 48%;
     }
 }

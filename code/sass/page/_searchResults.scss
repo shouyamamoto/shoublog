@@ -1,0 +1,150 @@
+/******************************************
+    414px
+******************************************/
+.searchResults {
+    @include sectionStyle;
+
+    &.current-item {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
+    &.breadcrumb {
+        margin: 40px;
+    }
+
+    &__label {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__image {
+        position: relative;
+        text-align: center;
+        flex-basis: 45%;
+        transition: all 0.4s;
+    }
+
+    &__image:hover {
+        transform: translateY(-10px);
+    }
+    &__thumbnail {
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__title--en {
+        @include sectionTitleEN;
+    }
+
+    &__details {
+        flex-basis: 55%;
+        margin: 0 auto;
+        margin-left: 10px;
+    }
+
+    &__detailTitle {
+        font-size: 12px;
+    }
+
+    &__time {
+        @include sectionTime;
+    }
+
+}
+
+/******************************************
+    768px
+******************************************/
+@media (min-width: 768px) {
+    .searchResults {
+        max-width: 90%;
+    
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &__item {
+            flex-basis: 48%;
+            flex-direction: column;
+        }
+
+        &__thumbnail {
+            height: 198.66px;
+        }
+    
+        &__details {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+    }
+}  
+
+/******************************************
+    1024px
+******************************************/
+
+@media (min-width: 1024px) {
+    .searchResults {
+        &__label {
+            font-size: 16px !important;
+        }
+
+        &__list::after {
+            content: '';
+            display: block;
+            flex-basis: 30%;
+        }
+
+        &__item {
+            flex-basis: 30% !important;
+        }
+
+        &__thumbnail {
+            height: 165.55px !important;
+        }
+
+        &__detailTitle {
+            font-size: 14px !important;
+        }
+    }
+}  
+
+/******************************************
+    1440px
+******************************************/
+
+@media (min-width: 1440px) {
+    .searchResults {
+        max-width: 80% !important;
+        
+        &__thumbnail {
+            height: 232.81px !important;
+        }
+
+        &__detailTitle {
+            font-size: 16px !important;
+        }
+    }
+}  
