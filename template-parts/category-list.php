@@ -5,12 +5,12 @@
 
     <div class="category__container">
         <!-- codeカテゴリーの子カテゴリー一覧 -->
-        <div class="codeCategory mb--md">
-            <div class="codeCategory__imageContainer">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="codeCategory__image" width="100%" height="200px">
-                <p class="codeCategory__text">コーディング<br><span class="codeCategory__text--small">CODE</span></p>
+        <div class="categorySection mb--md">
+            <div class="categorySection__imageContainer">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/code.jpg" alt="" class="categorySection__image" width="100%" height="200px">
+                <p class="categorySection__text">コーディング<br><span class="categorySection__text--small">CODE</span></p>
             </div>
-            <ul class="codeCategory__list">
+            <ul class="categorySection__list">
                 <?php 
                     $parent_category = get_category_by_slug('code');
                     $args = array(
@@ -22,8 +22,8 @@
                     $child_categories = get_categories($args);
                     foreach($child_categories as $category) :
                 ?>
-                <li class="codeCategory__item">
-                    <a href="<?php echo get_category_link($category->term_id); ?>" class="codeCategory__link">
+                <li class="categorySection__item">
+                    <a href="<?php echo get_category_link($category->term_id); ?>" class="categorySection__link">
                         <?php echo $category->cat_name; ?>
                     </a>
                 </li>
@@ -33,13 +33,13 @@
         <!-- codeカテゴリーの子カテゴリー一覧 -->
 
         <!-- photoカテゴリーの子カテゴリー一覧 -->
-        <div class="photoCategory mb--md">
-            <div class="codeCategory__imageContainer">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/photo.jpg" alt="" class="photoCategory__image" width="100%" height="200px">
-                <p class="codeCategory__text">写真のコト<br><span class="photoCategory__text--small">PHOTO</span></p>
+        <div class="categorySection mb--md">
+            <div class="categorySection__imageContainer">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/photo.jpg" alt="" class="categorySection__image" width="100%" height="200px">
+                <p class="categorySection__text">写真のコト<br><span class="categorySection__text--small">PHOTO</span></p>
             </div>
             
-            <ul class="photoCategory__list">
+            <ul class="categorySection__list">
             <?php 
                 $parent_category = get_category_by_slug('photo');
                 $args = array(
@@ -51,8 +51,8 @@
                 $child_categories = get_categories($args);
                 foreach($child_categories as $category) :
             ?>
-                <li class="photoCategory__item">
-                    <a href="<?php echo get_category_link($category->term_id); ?>" class="photoCategory__link">
+                <li class="categorySection__item">
+                    <a href="<?php echo get_category_link($category->term_id); ?>" class="categorySection__link">
                         <?php echo $category->cat_name; ?>
                     </a>
                 </li>
@@ -62,13 +62,13 @@
         <!-- photoカテゴリーの子カテゴリー一覧 -->
         
         <!-- lifeカテゴリーの子カテゴリー一覧 -->
-        <div class="lifeCategory mb--md">
-            <div class="codeCategory__imageContainer">
-                <img src="<?php echo get_template_directory_uri()?>/images/life.jpg" alt="" class="lifeCategory__image" width="100%" height="200px">
-                <p class="codeCategory__text">暮らしのコト<br><span class="photoCategory__text--small">LIFE</span></p>
+        <div class="categorySection mb--md">
+            <div class="categorySection__imageContainer">
+                <img src="<?php echo get_template_directory_uri()?>/images/life.jpg" alt="" class="categorySection__image" width="100%" height="200px">
+                <p class="categorySection__text">暮らしのコト<br><span class="categorySection__text--small">LIFE</span></p>
             </div>
             
-            <ul class="lifeCategory__list">
+            <ul class="categorySection__list">
             <?php 
                 $parent_category = get_category_by_slug('life');
                 $args = array(
@@ -81,8 +81,8 @@
                 $child_categories = get_categories($args);
                 foreach($child_categories as $category):
             ?>
-                <li class="lifeCategory__item">
-                    <a href="<?php echo get_category_link($category->term_id); ?>" class="lifeCategory__link">
+                <li class="categorySection__item">
+                    <a href="<?php echo get_category_link($category->term_id); ?>" class="categorySection__link">
                         <?php echo $category->cat_name; ?>
                     </a>
                 </li>
