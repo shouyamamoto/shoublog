@@ -52,7 +52,7 @@
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
             <?php else: ?>
-                <p>記事がありません。</p>
+                <li class="codeArticle__item"><p>記事がありません。</p></li>
             <?php endif; ?>
             </ul>
 
@@ -79,9 +79,9 @@
         <article class="photoArticle">
         <h2 class="photoArticle__title">写真のコト</h2>
         <span class="photoArticle__title--en">PHOTO</span>
-            <?php if ($the_query->have_posts()) :?>
             <ul class="photoArticle__list">
-                <?php while($the_query->have_posts()) : $the_query->the_post() ; ?>
+            <?php if ($the_query->have_posts()) :?>
+            <?php while($the_query->have_posts()) : $the_query->the_post() ; ?>
                 <li class="photoArticle__item mb--sm">
                     <div class="photoArticle__image">
                         <a href="<?php the_permalink(); ?>" class="photoArticle__link">
@@ -103,7 +103,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
                 <?php else: ?>
-                    <p>記事がありません。</p>
+                    <li class="photoArticle__item"><p>記事がありません。</p></li>
                 <?php endif; ?>
             </ul>
             <button class="photoArticle__btn">
@@ -129,9 +129,9 @@
         <article class="lifeArticle">
         <h2 class="lifeArticle__title">暮らしのコト</h2>
         <span class="lifeArticle__title--en">LIFE</span>
+            <ul class="lifeArticle__list">    
             <?php if ($the_query->have_posts()):?>
-            <ul class="lifeArticle__list">
-                <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
+            <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
                     <li class="lifeArticle__item mb--sm">
                         <div class="lifeArticle__image">
                             <a href="<?php the_permalink(); ?>" class="lifeArticle__link">
@@ -150,10 +150,10 @@
                             </a>
                         </div>
                     </li>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-                <?php else: ?>
-                    <p>記事がありません。</p>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php else: ?>
+                <li class="lifeArticle__item"><p>記事がありません。</p></li>
                 <?php endif; ?>
             </ul>
             <button class="lifeArticle__btn">

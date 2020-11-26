@@ -13,7 +13,9 @@
             <h1 class="page__title"><?php the_title(); ?></h1>
             
             <?php if(has_post_thumbnail()) :?>
-                <img src="<?php echo thumb_url( 'large' );?>" class="articleSingle__thumbnail" alt="">
+                <div class="page__thumbnail">
+                    <img src="<?php echo thumb_url( 'large' );?>" alt="">
+                </div>
             <?php endif; ?>
 
             <div class="page__content">

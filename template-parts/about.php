@@ -1,5 +1,5 @@
 <section class="about">
-    <h2 class="about__title">やましょうについて</h2>
+    <h2 class="about__title">しょうたろうについて</h2>
     <span class="about__title--en">ABOUT</span>
     <div class="about__item">
         <a href="<?php echo home_url('/about'); ?>" class="about__link">
