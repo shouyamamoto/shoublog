@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head prefix=”og: http://ogp.me/ns#” >
+<head prefix=”og: http://ogp.me/ns#”>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,6 +13,8 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@_syoyamamoto_" />
 
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
+
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/base.css">
@@ -20,6 +22,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
     
+    <!-- google search console -->
+    <meta name="google-site-verification" content="UB1dQltpObzvDcQl4LrqjtWaYwIG6hcZfK1Y6rJe3zE" />
+    <!-- google search console -->
     <?php wp_head(); ?>
 </head>
 <body>
