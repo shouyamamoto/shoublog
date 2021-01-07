@@ -1,7 +1,6 @@
 .articleSingle {
     width: 90%;
     margin: 40px auto 80px;
-    
     /*
     記事内のpスタイル
     */
@@ -29,24 +28,7 @@
     /*
     タイトルの基本設定終わり
     */
-
-    /*
-    ショートコードのタイトル用
-    */
-    .border-title {
-        border-top: 2px solid $cBlack;
-        border-bottom: 2px solid $cBlack;
-        padding: 6px 0;
-    }
-
-    .borderLeft-title {
-        border-left: 2px solid #000;
-        padding-left: 10px;
-    }
-    /*
-    ショートコードのタイトル用終わり
-    */
-
+    
     // 記事のラベル
     .post-categories li{
         display: inline;
@@ -61,7 +43,6 @@
         height: auto;
         margin: 20px calc(50% - 50vw);
     }
-
     
     // リストのスタイル
     .border-ul {
@@ -87,6 +68,8 @@
 
     &__thumbnail {
         width: 100%;
+        max-height: 575px;
+        object-fit: cover;
     }
 }
 
