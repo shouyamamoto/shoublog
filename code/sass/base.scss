@@ -10,16 +10,42 @@ body {
     letter-spacing: 0.04em;
     max-width: 1440px;
     color: $cBlack;
+    margin: 0 auto;
 }
 
 img {
     height: auto;
 }
 
+iframe {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .wp-block-image figcaption {
     font-size: 12px;
     color: $cGray;
+    padding-left: 20px;
 }
+
+
+
+    /*
+    ショートコードのタイトル用
+    */
+    .border-title {
+        border-top: 2px solid $cBlack;
+        border-bottom: 2px solid $cBlack;
+        padding: 6px 0;
+    }
+
+    .borderLeft-title {
+        border-left: 2px solid #000;
+        padding-left: 10px;
+    }
+    /*
+    ショートコードのタイトル用終わり
+    */
 
 @import "./common/**/*.scss";
 @import "./page/**/*.scss";

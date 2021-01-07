@@ -2,9 +2,33 @@
     width: 90%;
     margin: 40px auto 80px;
 
+    /*
+    記事内のpスタイル
+    */
     p {
+        line-height: 2;
+        margin: 40px 0;
         font-size: 14px;
     }
+    /*
+    記事内のpスタイル終わり
+    */
+
+    /*
+    タイトルの基本設定
+    */
+    h2 {
+        font-size: 22px;
+        margin: 40px 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 40px 0;
+    }
+    /*
+    タイトルの基本設定終わり
+    */
     
     &__title {
         margin: 20px 0;
