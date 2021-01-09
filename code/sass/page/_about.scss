@@ -1,5 +1,6 @@
 .about {
     @include sectionStyle;
+    width: 90%;
 
     &__item {
         display: flex;
