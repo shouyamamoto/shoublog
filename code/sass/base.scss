@@ -29,23 +29,22 @@ iframe {
 }
 
 
+/*
+ショートコードのタイトル用
+*/
+.border-title {
+    border-top: 2px solid $cBlack;
+    border-bottom: 2px solid $cBlack;
+    padding: 6px 0;
+}
 
-    /*
-    ショートコードのタイトル用
-    */
-    .border-title {
-        border-top: 2px solid $cBlack;
-        border-bottom: 2px solid $cBlack;
-        padding: 6px 0;
-    }
-
-    .borderLeft-title {
-        border-left: 2px solid #000;
-        padding-left: 10px;
-    }
-    /*
-    ショートコードのタイトル用終わり
-    */
+.borderLeft-title {
+    border-left: 2px solid #000;
+    padding-left: 10px;
+}
+/*
+ショートコードのタイトル用終わり
+*/
 
 @import "./common/**/*.scss";
 @import "./page/**/*.scss";

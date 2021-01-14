@@ -1,7 +1,4 @@
-'use strict';
-
-window.onload = () => {
-    const mainVisual = document.querySelector('.mainVisual__image');
-    const vh = window.innerHeight;
-    mainVisual.style.height = vh + 'px';
-}
+window.addEventListener('DOMContentLoaded', () => {
+  const mv = document.querySelector('.mainVisual__image');
+  mv.style.maxHeight = 500 + 'px';
+});
