@@ -20,7 +20,7 @@ navBtn.addEventListener('click', () => {
     body.addEventListener('touchmove', noScroll, {passive: false});
     body.addEventListener('mousewheel', noScroll, {passive: false});
   } else {
-    body.removeEventListener('mousewheel', noScroll, {passive: false});
+    body.removeEventListener('touchmove', noScroll, {passive: false});
     body.removeEventListener('mousewheel', noScroll, {passive: false});
   }
 });
