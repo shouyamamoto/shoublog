@@ -25,6 +25,10 @@
     <!-- google search console -->
     <meta name="google-site-verification" content="UB1dQltpObzvDcQl4LrqjtWaYwIG6hcZfK1Y6rJe3zE" />
     <!-- google search console -->
+
+    <!-- googleAd-->
+        <script data-ad-client="ca-pub-9197274995236177" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- googleAd-->
     <?php wp_head(); ?>
 </head>
 <body>
