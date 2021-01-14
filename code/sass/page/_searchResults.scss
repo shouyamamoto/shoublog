@@ -3,6 +3,7 @@
 ******************************************/
 .searchResults {
     @include sectionStyle;
+    width: 90%;
 
     &.current-item {
         background-color: transparent;
