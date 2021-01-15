@@ -8,9 +8,9 @@
     </ul>
 
     <div class="nav__btn">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </nav>
 <!-- ナビバー -->
