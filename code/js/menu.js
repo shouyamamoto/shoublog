@@ -4,10 +4,14 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.nav__list').classList.add('hidden');
 });
 
+const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.nav__btn');
 const navMenu = document.querySelector('.nav__list');
 const body = document.querySelector('.body');
 const navItem = document.querySelectorAll('.nav__item');
+const windowHeight = window.innerHeight;
+
+nav.style.height = windowHeight + 'px';
 
 function noScroll(event) {
   event.preventDefault();
@@ -20,7 +24,7 @@ navBtn.addEventListener('click', () => {
     body.addEventListener('touchmove', noScroll, {passive: false});
     body.addEventListener('mousewheel', noScroll, {passive: false});
   } else {
-    body.removeEventListener('mousewheel', noScroll, {passive: false});
+    body.removeEventListener('touchmove', noScroll, {passive: false});
     body.removeEventListener('mousewheel', noScroll, {passive: false});
   }
 });
